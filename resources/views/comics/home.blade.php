@@ -5,7 +5,7 @@
 
 {{-- index pagina principale  --}}
 
-<table class="table">
+<table class="table comic">
     <div>
         <h1 class="text-white fw-bolder bg-black p-2 rounded-1">Comics list:</h1>
     </div>
@@ -19,10 +19,15 @@
     <tbody>
         @foreach ($comics as $comic)
             <tr>
-                <th scope="row">{{ $comic->title }}</th>
+                <th scope="row w-100">
+                    <h5 class="fw-bold">{{ $comic->title }}</h5>
+                    <div class="image">
+                        <img src="{{ $comic->thumb }}" class="w-100 h-100 object-fit-cover">
+                    </div>
+                </th>
                 <td>{{ $comic->description }}</td>
                 <td>
-                    <a class="btn btn-primary" href="{{route('comics.show', $comic->id )}}">Detail</a>
+                    <a class="btn btn-danger fw-bold" href="{{route('comics.show', $comic->id )}}">Detail</a>
                 </td>
             </tr>
         @endforeach

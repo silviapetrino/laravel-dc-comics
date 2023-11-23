@@ -37,6 +37,10 @@
                 <span>Writers:</span>
                 {{ $comic->writers }}
             </p>
+            <a href="{{route('comics.index')}}" class="btn btn-danger">
+                <i class="fa-solid fa-left-long fa-beat-fade" style="color: #ffffff;"></i>
+                <span>Go back</span>
+            </a>
         </div>
       </div>
 </div>
