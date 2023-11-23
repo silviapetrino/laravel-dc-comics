@@ -4,17 +4,16 @@
 @section('content')
 
 {{-- index pagina principale  --}}
-<div>
-    <h1>Comics</h1>
-</div>
+
 <table class="table">
+    <div>
+        <h1 class="text-white fw-bolder bg-black p-2 rounded-1">Comics list:</h1>
+    </div>
     <thead>
       <tr>
         <th scope="col">Title</th>
         <th scope="col">Description</th>
         <th scope="col">Details</th>
-
-
       </tr>
     </thead>
     <tbody>

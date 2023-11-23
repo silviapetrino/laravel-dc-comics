@@ -4,12 +4,11 @@
 @section('content')
 
 
-
-<div class="card">
-    <div class="card p-3" style="width: 18rem;">
+<div class="comic">
+    <div class="card p-3 w-100 rounded-2" >
         <img src="{{ $comic->thumb }}" class="card-img-top" alt="{{ $comic->title }}">
         <div class="card-body">
-          <h5 class="card-title">{{ $comic->title}}</h5>
+          <h4 class="card-title fw-bolder">{{ $comic->title}}</h4>
             <p class="card-text">
                 <span>Description:</span>
                 {{ $comic->description }}
