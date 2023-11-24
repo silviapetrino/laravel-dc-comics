@@ -37,19 +37,19 @@
                 <span>Writers:</span>
                 {{ $comic->writers }}
             </p>
-            {{-- actions   --}}
-            <a href="{{route('comics.index')}}" class="btn btn-danger">
-                <i class="fa-solid fa-left-long fa-beat-fade" style="color: #ffffff;"></i>
-                <span>Go back</span>
-            </a>
-            <a href="{{ route('comics.create') }}" class="btn btn-primary">
-                <i class="fa-solid fa-plus fa-beat-fade"></i>
-                <span>Add new comic</span>
-            </a>
-            <a href="{{ route('comics.edit', $comic) }}" class="btn btn-success">
-                <i class="fa-solid fa-pencil fa-beat-fade"></i>
-                <span>Edit comic's info</span>
-            </a>
+
+            <div class="buttons-group">
+                {{-- go back to list  --}}
+                @include('layout.partials.goBackBtn')
+                    {{-- create comic  --}}
+                @include('layout.partials.createComicBtn')
+                    {{-- edit comic  --}}
+                @include('layout.partials.editComicBtn')
+                     {{-- delete comic  --}}
+                @include('layout.partials.deleteComicBtn')
+            </div>
+
+
         </div>
       </div>
 </div>

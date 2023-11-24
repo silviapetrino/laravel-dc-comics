@@ -10,6 +10,6 @@
 
     <h3 class="fw-bold py-2">Edit comic's informations:</h3>
     @include('layout.partials.comicForm')
-  </form>
+</form>
 
 @endsection
