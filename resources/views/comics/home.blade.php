@@ -6,8 +6,12 @@
 {{-- index pagina principale  --}}
 
 <table class="table comic">
-    <div>
-        <h1 class="text-white fw-bolder bg-black p-2 rounded-1">Comics list:</h1>
+    <div class="d-flex justify-content-between align-items-center bg-black p-3">
+        <h1 class="text-white fw-bolder">Comics list:</h1>
+        <a href="{{ route('comics.create') }}" class="btn btn-primary">
+            <i class="fa-solid fa-plus fa-beat-fade"></i>
+            <span>Add new comic</span>
+        </a>
     </div>
     <thead>
       <tr>
