@@ -3,11 +3,12 @@
 
 @section('content')
 
-{{-- index pagina principale  --}}
+{{-- main page --}}
 
 <table class="table comic">
     <div class="d-flex justify-content-between align-items-center bg-black p-3">
         <h1 class="text-white fw-bolder">Comics list:</h1>
+             {{-- action create comic--}}
         @include('layout.partials.createComicBtn')
     </div>
     <thead>
@@ -27,11 +28,12 @@
                     </div>
                 </th>
                 <td>{{ $comic->description }}</td>
+                {{-- actions  show, delete, edit--}}
                 <td>
                     @include('layout.partials.showComicBtn')
 
                     @include('layout.partials.deleteComicBtn')
-                    
+
                     @include('layout.partials.editComicBtn')
                 </td>
             </tr>
