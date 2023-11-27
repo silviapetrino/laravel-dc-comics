@@ -77,16 +77,14 @@ class ComicController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $comic)
+    public function update(Request $request, Comic $comic)
     {
-        $comics_data_form = $request->all();
+        $form_data = $request->all();
 
-        $new_comic = new Comic();
+        $comic->update($form_data);
 
-        $new_comic->fill($comics_data_form);
-        $new_comic->save();
 
-        return redirect()->route('comics.show', $new_comic);
+        return redirect()->route('comics.show', $comic);
     }
 
     /**
